@@ -1,0 +1,186 @@
+/* Tailwind covers most styling, adding specific custom properties here */
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::selection {
+    background-color: #ccff00;
+    color: #0a1f1c;
+}
+
+.mix-blend-overlay {
+    mix-blend-mode: overlay;
+}
+
+.section-fade::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(10, 31, 28, 0), rgba(10, 31, 28, 1));
+}
+
+.skills-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0 0.75rem;
+}
+
+.skills-track {
+    display: flex;
+    width: max-content;
+    gap: 1.25rem;
+    animation: skills-scroll 26s linear infinite;
+    will-change: transform;
+}
+
+.skills-marquee.is-paused .skills-track {
+    animation-play-state: paused;
+}
+
+.skills-row {
+    display: flex;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+.skill-item {
+    position: relative;
+    min-width: 6.5rem;
+    padding: 0.75rem 0.25rem 2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f2f0e4;
+    text-decoration: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+    opacity: 1;
+}
+
+.skill-item:hover {
+    transform: translateY(-1px);
+}
+
+.skills-marquee:hover .skill-item:not(:hover) {
+    opacity: 0.28;
+}
+
+.skill-icon {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+}
+
+.skill-icon-mark {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.skill-icon-premiere {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.skill-icon-openai {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.skill-icon-map {
+    color: #ccff00;
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+.skill-tooltip {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ccff00;
+    opacity: 0;
+    transition: opacity 180ms ease, transform 180ms ease;
+    pointer-events: none;
+}
+
+.skill-item:hover .skill-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Staggered name hover animation */
+.name-hover {
+    display: inline-block;
+    cursor: default;
+}
+/* each letter holds a stack of two identical letters; the stack translates up on hover */
+.name-letter {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    height: 1em; /* constrain to a single letter height */
+    vertical-align: bottom;
+}
+.name-letter .stack {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 720ms cubic-bezier(.2,.9,.2,1);
+}
+.name-letter .stack span {
+    display: block;
+    height: 1em;
+    line-height: 1;
+}
+/* on hover, move the stack up by one letter (50% of the two-line stack) */
+.name-hover:hover .name-letter .stack {
+    transform: translateY(-50%);
+}
+/* Stagger delays for the stack transform to preserve the desired sequence */
+.name-hover .name-letter:nth-child(1) .stack { transition-delay: 0s; }
+.name-hover .name-letter:nth-child(2) .stack { transition-delay: 0.08s; }
+.name-hover .name-letter:nth-child(3) .stack { transition-delay: 0.16s; }
+.name-hover .name-letter:nth-child(4) .stack { transition-delay: 0.24s; }
+
+/* Color pop for both front and back when hovered */
+.name-hover .letter-front,
+.name-hover .letter-back { transition: color 260ms ease; }
+.name-hover:hover .letter-front,
+.name-hover:hover .letter-back { color: var(--tw-color-accent, #ccff00); }
+
+/* Tighten spacing between letter spans to reduce visual gaps */
+.name-hover { letter-spacing: -0.30em; }
+.name-letter { margin-right: -0.12em; }
+.name-letter:last-child { margin-right: 0; }
+
+@keyframes skills-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 640px) {
+    .skills-track {
+        animation-duration: 20s;
+    }
+
+    .skill-item {
+        min-width: 5.75rem;
+    }
+}

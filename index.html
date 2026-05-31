@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashith | Design Student</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#0a1f1c',
+                        textMain: '#f2f0e4',
+                        accent: '#ccff00', /* Neon yellow/green */
+                        secondary: '#8a9b99'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        display: ['Syne', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Feather Icons for lightweight SVGs -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-bg text-textMain selection:bg-accent selection:text-bg font-sans antialiased overflow-x-hidden relative">
+
+    <!-- Fixed Floating Navigation -->
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 p-2 bg-bg/80 backdrop-blur-md border border-textMain/10 rounded-full shadow-2xl">
+        <div class="flex items-center gap-2 pl-3 pr-5 py-2 border-r border-textMain/10 font-mono text-xs">
+            <a href="#experience" class="hover:text-accent transition-colors">EXP</a>
+            <span class="text-textMain/40">/</span>
+            <a href="#projects" class="hover:text-accent transition-colors">PROJ</a>
+        </div>
+        <div class="flex items-center gap-1 pl-0">
+            <a href="mailto:jashith127@gmail.com" class="p-2 hover:bg-textMain/10 rounded-full transition-colors group relative">
+                <i data-feather="mail" class="w-5 h-5 text-textMain group-hover:text-accent transition-colors"></i>
+            </a>
+            <a href="https://github.com/Jashith127" target="_blank" rel="noopener noreferrer" class="p-2 hover:bg-textMain/10 rounded-full transition-colors group relative">
+                <i data-feather="github" class="w-5 h-5 text-textMain group-hover:text-accent transition-colors"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 pb-32">
+
+        <!-- Hero Section -->
+        <section id="hero-section" class="min-h-screen flex flex-col justify-center pt-20 pb-12 relative overflow-hidden w-screen left-1/2 -translate-x-1/2">
+                 <div id="hero-grid-mask" class="absolute inset-0 pointer-events-none" style="background-image: url('assets/Hero.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                <!-- Cursor-localized grid spot (initially hidden) -->
+                <div id="hero-grid-spot" class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.16) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255,255,255,0.16) 1.5px, transparent 1.5px); background-size: 42px 42px; background-position: center; opacity: 0; transition: opacity 260ms linear; mix-blend-mode: screen;"></div>
+            <div class="absolute inset-0 opacity-20 mix-blend-overlay" style="background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=\u00220 0 200 200\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022%3E%3Cfilter id=\u0022heroNoise\u0022%3E%3CfeTurbulence type=\u0022fractalNoise\u0022 baseFrequency=\u00220.9\u0022 numOctaves=\u00224\u0022 stitchTiles=\u0022stitch\u0022/%3E%3C/filter%3E%3Crect width=\u0022100%25\u0022 height=\u0022100%25\u0022 filter=\u0022url(%23heroNoise)\u0022 opacity=\u00220.5\u0022/%3E%3C/svg%3E');"></div>
+
+            <div class="space-y-6 max-w-5xl section-animate relative z-10 px-6 md:px-8">
+                <div class="font-mono text-xs md:text-sm tracking-wider uppercase text-accent">
+                    SRISHTI MANIPAL INSTITUTE OF ART, DESIGN AND TECHNOLOGY
+                </div>
+                
+                <h1 class="font-display text-5xl md:text-8xl lg:text-[7rem] font-extrabold leading-none tracking-tight name-hover">
+                    <span class="name-letter"><span class="stack"><span class="letter-front">J</span><span class="letter-back">J</span></span></span>
+                    <span class="name-letter"><span class="stack"><span class="letter-front">A</span><span class="letter-back">A</span></span></span>
+                    <span class="name-letter"><span class="stack"><span class="letter-front">S</span><span class="letter-back">S</span></span></span>
+                    <span class="name-letter"><span class="stack"><span class="letter-front">H</span><span class="letter-back">H</span></span></span>
+                </h1>
+                
+                <div class="space-y-4 pt-4 border-l-2 border-accent pl-6 ml-1">
+                    <p class="font-mono text-accent text-sm md:text-base">
+                        // Strategic Designer | Systems Thinker
+                    </p>
+                    <p class="text-xl md:text-3xl font-light text-textMain/80 leading-relaxed max-w-3xl">
+                        Student at SMI (B.Des) specializing in Business, Systems and Service Design, focused on identifying structural gaps and scalable solutions through systems research and AI-assisted development.
+                    </p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-32 left-6 md:left-12 font-mono text-xs text-textMain/40 flex items-center gap-2 animate-bounce z-10">
+                <i data-feather="arrow-down" class="w-4 h-4"></i> SCROLL
+            </div>
+        </section>
+
+        <!-- Experience Section (from resume) -->
+        <section id="experience" class="py-24 border-t border-textMain/10">
+            <h2 class="font-mono text-sm md:text-base text-accent mb-12 flex items-center gap-4 section-animate">
+                <span>01 / EXPERIENCE</span>
+                <span class="h-px bg-textMain/20 flex-1"></span>
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Business Advisor -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group section-animate">
+                    <div class="font-mono text-secondary pt-1">
+                        <span class="inline-block px-3 py-1 rounded-full border border-textMain/10 text-xs shadow-sm bg-textMain/5">Late 2024 - Present</span>
+                    </div>
+                    <div class="col-span-3 space-y-4">
+                        <div>
+                            <h3 class="font-display text-2xl md:text-3xl font-bold">Business Advisor — Eurokids</h3>
+                            <p class="font-mono text-textMain/60 mt-1">Strategic Operations & Service Design</p>
+                        </div>
+                        <ul class="list-disc pl-5 text-textMain/70 text-lg font-light leading-relaxed max-w-2xl">
+                            <li>Spearheaded an operational overhaul that increased customer ratings from 3.8 to 4.9 stars.</li>
+                            <li>Optimised internal workflows to enhance service delivery and parent satisfaction.</li>
+                            <li>Implemented communication protocols to build long-term community trust.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Systems Design Consultant -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group section-animate">
+                    <div class="font-mono text-secondary pt-1">
+                        <span class="inline-block px-3 py-1 rounded-full border border-textMain/10 text-xs shadow-sm bg-textMain/5">Project (People's Trust)</span>
+                    </div>
+                    <div class="col-span-3 space-y-4">
+                        <div>
+                            <h3 class="font-display text-2xl md:text-3xl font-bold">Systems Design Consultant — People's Trust</h3>
+                            <p class="font-mono text-textMain/60 mt-1">Community Enterprise Pathways</p>
+                        </div>
+                        <ul class="list-disc pl-5 text-textMain/70 text-lg font-light leading-relaxed max-w-2xl">
+                            <li>Conducted systems analysis of Self-Help Groups (SHGs) to assess enterprise readiness.</li>
+                            <li>Proposed transition pathways for community groups into sustainable collective enterprises.</li>
+                            <li>Developed strategies to leverage capital across 27 SHGs to ensure structured growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (from resume) -->
+        <section id="projects" class="py-24 border-t border-textMain/10 relative section-fade">
+            <h2 class="font-mono text-sm md:text-base text-accent mb-12 flex items-center gap-4 section-animate">
+                <span>02 / PROJECTS</span>
+                <span class="h-px bg-textMain/20 flex-1"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project: Anatomy of iPhone -->
+                <a href="https://anatomyofiphone.framer.website/" target="_blank" rel="noopener noreferrer" class="group relative block bg-[#122b27] p-8 md:p-12 rounded-2xl border border-textMain/5 hover:border-accent/40 transition-colors overflow-hidden prallax-card">
+                    <span class="pointer-events-none absolute top-6 right-6 inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/60 bg-bg/60 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-feather="arrow-up-right" class="w-7 h-7"></i>
+                    </span>
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+                        <div class="space-y-4 max-w-xl">
+                            <div class="font-mono text-xs text-secondary flex items-center gap-3">
+                                <span class="text-bg bg-accent px-2 py-0.5 rounded font-bold">Group</span>
+                                <span>Production-to-Waste</span>
+                            </div>
+                            <h3 class="font-display text-3xl md:text-4xl font-bold">Anatomy of iPhone</h3>
+                            <p class="text-textMain/70 font-light text-lg">
+                                Led the development of the website and coordinated with a 20–23 person team to build a high-fidelity Framer site that visualized production-to-waste flows and e-waste impacts. Created clear causal and value maps to communicate systemic impact.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="font-mono text-xs px-2 py-1 rounded border border-textMain/10 text-textMain/60">Framer</span>
+                                <span class="font-mono text-xs px-2 py-1 rounded border border-textMain/10 text-textMain/60">Systems Mapping</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: OTTR Desktop -->
+                <a href="https://github.com/Jashith127/ottr-desktop" target="_blank" rel="noopener noreferrer" class="group relative block bg-[#122b27] p-8 md:p-12 rounded-2xl border border-textMain/5 hover:border-accent/40 transition-colors overflow-hidden prallax-card">
+                    <span class="pointer-events-none absolute top-6 right-6 inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/60 bg-bg/60 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-feather="arrow-up-right" class="w-7 h-7"></i>
+                    </span>
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+                        <div class="space-y-4 max-w-xl">
+                            <div class="font-mono text-xs text-secondary flex items-center gap-3">
+                                <span class="text-bg bg-accent px-2 py-0.5 rounded font-bold">Tool</span>
+                                <span>Lead Developer</span>
+                            </div>
+                            <h3 class="font-display text-3xl md:text-4xl font-bold">OTTR Desktop</h3>
+                            <p class="text-textMain/70 font-light text-lg">
+                                Minimalist terminal-style academic planner inspired by Obsidian. Built with a focus on streamlined workflow and AI-assisted prototyping.
+                            </p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="font-mono text-xs px-2 py-1 rounded border border-textMain/10 text-textMain/60">JavaScript</span>
+                                <span class="font-mono text-xs px-2 py-1 rounded border border-textMain/10 text-textMain/60">AI-assisted</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 border-t border-textMain/10 relative overflow-hidden section-fade">
+            <h2 class="font-mono text-sm md:text-base text-accent mb-12 flex items-center gap-4 section-animate">
+                <span>03 / SKILLS</span>
+                <span class="h-px bg-textMain/20 flex-1"></span>
+            </h2>
+
+            <div class="skills-marquee section-animate" data-skills-marquee>
+                <div class="skills-track" data-skills-track>
+                    <div class="skills-row">
+                        <div class="skill-item" data-skill-item data-skill-name="Figma"><img class="skill-icon" src="assets/figma.svg" alt="Figma logo" loading="lazy"><span class="skill-tooltip">Figma</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Framer"><img class="skill-icon" src="assets/framer.svg" alt="Framer logo" loading="lazy"><span class="skill-tooltip">Framer</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Premiere Pro"><img class="skill-icon" src="assets/premiere.svg" alt="Premiere Pro logo" loading="lazy"><span class="skill-tooltip">Premiere Pro</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="JavaScript"><img class="skill-icon" src="assets/javascript.svg" alt="JavaScript logo" loading="lazy"><span class="skill-tooltip">JavaScript</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Systems Mapping"><svg class="skill-icon skill-icon-map" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5A2.5 2.5 0 1 1 8.5 10h7A2.5 2.5 0 1 1 18 7.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M7 16.5A2.5 2.5 0 1 1 9.5 14h5A2.5 2.5 0 1 1 17 16.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="8.5" cy="10" r="1" fill="currentColor"/><circle cx="15.5" cy="10" r="1" fill="currentColor"/><circle cx="9.5" cy="14" r="1" fill="currentColor"/><circle cx="14.5" cy="14" r="1" fill="currentColor"/></svg><span class="skill-tooltip">Systems Mapping</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="TypeScript"><img class="skill-icon" src="assets/typescript.svg" alt="TypeScript logo" loading="lazy"><span class="skill-tooltip">TypeScript</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="AI Assisted Workflows"><img class="skill-icon" src="assets/openai.svg" alt="OpenAI logo" loading="lazy"><span class="skill-tooltip">AI Assisted Workflows</span></div>
+                    </div>
+                    <div class="skills-row" aria-hidden="true">
+                        <div class="skill-item" data-skill-item data-skill-name="Figma"><img class="skill-icon" src="assets/figma.svg" alt="Figma logo" loading="lazy"><span class="skill-tooltip">Figma</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Framer"><img class="skill-icon" src="assets/framer.svg" alt="Framer logo" loading="lazy"><span class="skill-tooltip">Framer</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Premiere Pro"><img class="skill-icon" src="assets/premiere.svg" alt="Premiere Pro logo" loading="lazy"><span class="skill-tooltip">Premiere Pro</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="JavaScript"><img class="skill-icon" src="assets/javascript.svg" alt="JavaScript logo" loading="lazy"><span class="skill-tooltip">JavaScript</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="Systems Mapping"><svg class="skill-icon skill-icon-map" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5A2.5 2.5 0 1 1 8.5 10h7A2.5 2.5 0 1 1 18 7.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M7 16.5A2.5 2.5 0 1 1 9.5 14h5A2.5 2.5 0 1 1 17 16.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="8.5" cy="10" r="1" fill="currentColor"/><circle cx="15.5" cy="10" r="1" fill="currentColor"/><circle cx="9.5" cy="14" r="1" fill="currentColor"/><circle cx="14.5" cy="14" r="1" fill="currentColor"/></svg><span class="skill-tooltip">Systems Mapping</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="TypeScript"><img class="skill-icon" src="assets/typescript.svg" alt="TypeScript logo" loading="lazy"><span class="skill-tooltip">TypeScript</span></div>
+                        <div class="skill-item" data-skill-item data-skill-name="AI Assisted Workflows"><img class="skill-icon" src="assets/openai.svg" alt="OpenAI logo" loading="lazy"><span class="skill-tooltip">AI Assisted Workflows</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Initialization -->
+        <section class="py-24 border-t border-textMain/10 mt-12 section-animate">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+                <div class="space-y-6">
+                <p class="font-mono text-secondary text-sm">04 / CONTACT ME</p>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight">
+                        Let's Build <br> Together.
+                    </h2>
+                    <a href="mailto:jashith127@gmail.com" class="inline-block text-xl border-b border-accent pb-1 text-accent hover:text-textMain hover:border-textMain transition-colors">
+                        jashith127@gmail.com
+                    </a>
+                </div>
+                <div class="font-mono text-xs text-secondary space-y-2 text-left md:text-right">
+                
+                    <p>© 2026 Jashith S Kumar.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
