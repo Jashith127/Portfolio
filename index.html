@@ -55,7 +55,9 @@
 
         <!-- Hero Section -->
         <section id="hero-section" class="min-h-screen flex flex-col justify-center pt-20 pb-12 relative overflow-hidden w-screen left-1/2 -translate-x-1/2">
-                 <div id="hero-grid-mask" class="absolute inset-0 pointer-events-none" style="background-image: url('assets/Hero.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                      <div id="hero-grid-mask" class="absolute inset-0 pointer-events-none">
+                          <img src="assets/Hero.jpeg" alt="" aria-hidden="true" class="hero-bg-image">
+                      </div>
                 <!-- Cursor-localized grid spot (initially hidden) -->
                 <div id="hero-grid-spot" class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.16) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255,255,255,0.16) 1.5px, transparent 1.5px); background-size: 42px 42px; background-position: center; opacity: 0; transition: opacity 260ms linear; mix-blend-mode: screen;"></div>
             <div class="absolute inset-0 opacity-20 mix-blend-overlay" style="background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=\u00220 0 200 200\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022%3E%3Cfilter id=\u0022heroNoise\u0022%3E%3CfeTurbulence type=\u0022fractalNoise\u0022 baseFrequency=\u00220.9\u0022 numOctaves=\u00224\u0022 stitchTiles=\u0022stitch\u0022/%3E%3C/filter%3E%3Crect width=\u0022100%25\u0022 height=\u0022100%25\u0022 filter=\u0022url(%23heroNoise)\u0022 opacity=\u00220.5\u0022/%3E%3C/svg%3E');"></div>
@@ -82,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="absolute bottom-32 left-6 md:left-12 font-mono text-xs text-textMain/40 flex items-center gap-2 animate-bounce z-10">
+            <div id="scroll-indicator" class="absolute bottom-32 left-6 md:left-12 font-mono text-xs text-textMain/40 flex items-center gap-2 animate-bounce z-10">
                 <i data-feather="arrow-down" class="w-4 h-4"></i> SCROLL
             </div>
         </section>

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 4. Localized cursor-grid spot: show grid only around cursor, fade after inactivity
+    // 4. Localized cursor-grid spot: show grid only around cursor
     const heroSection = document.getElementById('hero-section');
     const heroGridSpot = document.getElementById('hero-grid-spot');
 
