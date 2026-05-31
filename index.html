@@ -33,6 +33,11 @@
 </head>
 <body class="bg-bg text-textMain selection:bg-accent selection:text-bg font-sans antialiased overflow-x-hidden relative">
 
+    <!-- Top-right logo -->
+    <a href="#hero-section" class="site-logo fixed top-5 right-5 md:top-6 md:right-6 z-50 block" aria-label="Back to top">
+        <img src="assets/logo.png" alt="Jashith logo" class="site-logo-image">
+    </a>
+
     <!-- Fixed Floating Navigation -->
     <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 p-2 bg-bg/80 backdrop-blur-md border border-textMain/10 rounded-full shadow-2xl">
         <div class="flex items-center gap-2 pl-3 pr-5 py-2 border-r border-textMain/10 font-mono text-xs">
@@ -87,6 +92,8 @@
             <div id="scroll-indicator" class="absolute bottom-32 left-6 md:left-12 font-mono text-xs text-textMain/40 flex items-center gap-2 animate-bounce z-10">
                 <i data-feather="arrow-down" class="w-4 h-4"></i> SCROLL
             </div>
+
+            <div data-hero-end aria-hidden="true" class="absolute bottom-0 left-0 h-px w-px pointer-events-none"></div>
         </section>
 
         <!-- Experience Section (from resume) -->
