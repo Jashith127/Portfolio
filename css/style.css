@@ -44,6 +44,18 @@ body::-webkit-scrollbar {
 .skills-marquee {
     position: relative;
     overflow: hidden;
+    padding: 0.5rem 0 0.75rem;
+}
+
+.skills-track {
+    display: flex;
+    width: max-content;
+    gap: 1.25rem;
+    animation: skills-scroll 26s linear infinite;
+    will-change: transform;
+}
+
+.skills-marquee.is-paused .skills-track {
     animation-play-state: paused;
 }
 
@@ -75,30 +87,30 @@ body::-webkit-scrollbar {
 }
 
 .skill-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: block;
 }
 
 .skill-icon-mark {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
 }
 
 .skill-icon-premiere {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
 }
 
 .skill-icon-openai {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
 }
 
 .skill-icon-map {
     color: #ccff00;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
 }
 
 .skill-tooltip {
